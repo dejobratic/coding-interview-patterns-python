@@ -14,7 +14,8 @@ def remove_kth_last_node(head: ListNode, k: int) -> ListNode:
         leader = leader.next
         trailer = trailer.next
 
-    trailer.next = None if trailer.next is None else trailer.next.next
+    if trailer.next:
+        trailer.next = trailer.next.next
 
     return dummy.next
 
