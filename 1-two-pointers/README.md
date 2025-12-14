@@ -19,6 +19,10 @@ Two-pointer algorithms use two indices (pointers) to traverse sequence-like data
 
 Return the indices of any pair of numbers in a sorted array that sum to a target value.
 
-### 2. [Next Problem]
+### 2. Triplet Sum ([triplet_sum.py](triplet_sum.py))
+
+Return all distinct triplets [a, b, c] from an array, such that a + b + c = 0.
+
+### 3. [Next Problem]
 
 Coming soon...
