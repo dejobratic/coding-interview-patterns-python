@@ -23,6 +23,10 @@ Return the indices of any pair of numbers in a sorted array that sum to a target
 
 Return all distinct triplets [a, b, c] from an array, such that a + b + c = 0.
 
+### 3. Is Palindrome Valid ([is_palindrome_valid.py](is_palindrome_valid.py))
+
+Determine whether a string is a palindrome after removing all non-alphanumeric characters.
+
 ### 3. [Next Problem]
 
 Coming soon...
