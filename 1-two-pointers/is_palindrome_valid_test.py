@@ -62,7 +62,7 @@ class TestIsPalindromeValid:
         "s, expected",
         [
             ("!@#$%^&*()", True),
-            ("taco, cat", True),
+            ("20.02.2002", True),
             ("a dog! a panic in a pagoda.", True),
         ],
     )

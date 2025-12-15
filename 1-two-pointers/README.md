@@ -27,6 +27,6 @@ Return all distinct triplets [a, b, c] from an array, such that a + b + c = 0.
 
 Determine whether a string is a palindrome after removing all non-alphanumeric characters.
 
-### 3. [Next Problem]
+### 4. Largest Container ([largest_container.py](largest_container.py))
 
-Coming soon...
+Given an array of heights representing vertical lines, find the maximum water area between any two lines.
