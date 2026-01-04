@@ -2,74 +2,78 @@ from is_palindrome_valid import is_palindrome_valid
 import pytest
 
 
-class TestIsPalindromeValid:
-    def test_empty_string(self):
-        # arrange
-        s = ""
+def test_empty_string():
+    # arrange
+    s = ""
 
-        # act
-        actual = is_palindrome_valid(s)
+    # act
+    actual = is_palindrome_valid(s)
 
-        # assert
-        assert actual == True
+    # assert
+    assert actual == True
 
-    def test_single_character_string(self):
-        # arrange
-        s = "a"
 
-        # act
-        actual = is_palindrome_valid(s)
+def test_single_character_string():
+    # arrange
+    s = "a"
 
-        # assert
-        assert actual == True
+    # act
+    actual = is_palindrome_valid(s)
 
-    def test_two_character_non_palindromic_string(self):
-        # arrange
-        s = "ab"
+    # assert
+    assert actual == True
 
-        # act
-        actual = is_palindrome_valid(s)
 
-        # assert
-        assert actual == False
+def test_two_character_non_palindromic_string():
+    # arrange
+    s = "ab"
 
-    def test_two_character_palindromic_string(self):
-        # arrange
-        s = "aa"
+    # act
+    actual = is_palindrome_valid(s)
 
-        # act
-        actual = is_palindrome_valid(s)
+    # assert
+    assert actual == False
 
-        # assert
-        assert actual == True
 
-    @pytest.mark.parametrize(
-        "s, expected",
-        [
-            ("abc123", False),
-            ("#$%^a&*b()", False),
-        ],
-    )
-    def test_multiple_character_non_palindromic_string(self, s: str, expected: bool):
-        # arrange
-        # act
-        actual = is_palindrome_valid(s)
+def test_two_character_palindromic_string():
+    # arrange
+    s = "aa"
 
-        # assert
-        assert actual == False
+    # act
+    actual = is_palindrome_valid(s)
 
-    @pytest.mark.parametrize(
-        "s, expected",
-        [
-            ("!@#$%^&*()", True),
-            ("20.02.2002", True),
-            ("a dog! a panic in a pagoda.", True),
-        ],
-    )
-    def test_multiple_character_palindromic_string(self, s: str, expected: bool):
-        # arrange
-        # act
-        actual = is_palindrome_valid(s)
+    # assert
+    assert actual == True
 
-        # assert
-        assert actual == expected
+
+@pytest.mark.parametrize(
+    "s, expected",
+    [
+        ("abc123", False),
+        ("#$%^a&*b()", False),
+    ],
+)
+def test_multiple_character_non_palindromic_string(s: str, expected: bool):
+    # arrange
+    # act
+    actual = is_palindrome_valid(s)
+
+    # assert
+    assert actual == False
+
+
+@pytest.mark.parametrize(
+    "s, expected",
+    [
+        ("!@#$%^&*()", True),
+        ("20.02.2002", True),
+        ("a dog! a panic in a pagoda.", True),
+    ],
+)
+def test_multiple_character_palindromic_string(s: str, expected: bool):
+    # arrange
+    # act
+    actual = is_palindrome_valid(s)
+
+    # assert
+    assert actual == expected
